@@ -4,7 +4,7 @@ var router = express.Router();
 
 router.get('/', function(req, res, next) {
 
-  res.render('index', { title: 'Gloabl Inflation'} );
+  res.render('index', { title: 'Global Inflation Figure'} );
 });
 
 module.exports = router;
