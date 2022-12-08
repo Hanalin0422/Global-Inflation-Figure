@@ -11,8 +11,14 @@
       margin: 0;
       padding: 0;
     }
-    canvas {
-      background-image: url('//unpkg.com/three-globe/example/img/night-sky.png');
+    canvas{
+      display: block;
+    }
+    #inflationChart{
+      text-align: center;
+    }
+    #goSatics{
+      position:relative;
     }
   </style>
   <script src="//unpkg.com/three"></script>
@@ -23,6 +29,9 @@
 <body>
 
   <div id="globeViz"></div>
+  <div id="inflationChart">
+    <button id = "goSatics">버튼</button>
+  </div>
 
   <script>
 
@@ -41,7 +50,7 @@
 
     // Setup renderer
     const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(window.innerWidth, window.innerHeight-30);
     document.getElementById('globeViz').appendChild(renderer.domElement);
 
     // Setup scene
@@ -70,6 +79,7 @@
       renderer.render(scene, camera);
       requestAnimationFrame(animate);
     })();
+
   </script>
 
 </body>

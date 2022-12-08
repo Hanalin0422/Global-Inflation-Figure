@@ -3,7 +3,7 @@
 사용한 거
 node js - 서버 돌리기
 globe.gl - 지구 그리기
-selenium - 위도, 경도 찾는 크롤링
+beautifulSoup - 위도, 경도 찾는 크롤링
 
 참고 깃허브
 https://github.com/vasturiano/three-globe
