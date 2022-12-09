@@ -10,28 +10,27 @@
     body {
       margin: 0;
       padding: 0;
+      background-image: url('//unpkg.com/three-globe/example/img/night-sky.png');
     }
-    canvas{
-      display: block;
+    
+    .goStatics{
+      margin-left: 90%;
     }
-    #inflationChart{
-      text-align: center;
-    }
-    #goSatics{
-      position:relative;
-    }
+    
+
   </style>
+
   <script src="//unpkg.com/three"></script>
   <script src="//unpkg.com/three/examples/js/controls/TrackballControls.js"></script>
   <script src="//unpkg.com/three-globe"></script>
 </head>
 
 <body>
+  <span class="goStatics">
+    <button class="accept" onclick=location.href='http://localhost:3000/statics'>통계차트<br>보러가기</button>
+  </span>
 
   <div id="globeViz"></div>
-  <div id="inflationChart">
-    <button id = "goSatics">버튼</button>
-  </div>
 
   <script>
 
@@ -50,7 +49,7 @@
 
     // Setup renderer
     const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight-30);
+    renderer.setSize(window.innerWidth, window.innerHeight);
     document.getElementById('globeViz').appendChild(renderer.domElement);
 
     // Setup scene

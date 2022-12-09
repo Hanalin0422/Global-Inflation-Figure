@@ -6,3 +6,25 @@ body {
 a {
   color: #00B7FF;
 }
+
+button {
+  min-width: 6rem;
+  width: 6vw;
+  height: 7vh;
+  border-radius: 4px;
+  margin: 5px;
+  cursor: pointer;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+
+.accept {
+  border: 1px #E6E6FA solid;
+  background-color: #010412;
+  color: #E6E6FA;
+}
+.accept:hover {
+  transition: background-color 0.5s ease;
+  background-color: #E6E6FA;
+  color: black;
+}
