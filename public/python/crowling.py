@@ -1,3 +1,4 @@
+"""
 import urllib.request as req
 import requests
 from bs4 import BeautifulSoup
@@ -25,3 +26,4 @@ for country_info in country_list[1::]:
 
 print(latest_global_cpi_list)
 
+"""

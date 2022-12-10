@@ -24,14 +24,37 @@
     </div>
     
     <script>
+      let dataInfo = <%- dataInfo %>;
+      let countryList = [];
+      let cpiList = [];
+
+      for(key in dataInfo){
+        let inner = dataInfo[key];
+        for (const [key, value] of Object.entries(inner)) {
+          if(key == 'country'){
+            countryList.push(value);
+          }
+        }
+      }
+
+      for(key in dataInfo){
+        let inner = dataInfo[key];
+        for (const [key, value] of Object.entries(inner)) {
+          if(key == 'cpi'){
+            cpiList.push(value);
+          }
+        }
+      }
+      
+
          new Chart(document.getElementById("pie-chart"), {
             type: 'pie',
             data: {
-              labels: ['Austria', 'Belgium', 'Brazil', 'Canada', 'Switzerland', 'Chile', 'China', 'Czech Republic', 'Germany', 'Denmark', 'Estonia', 'Spain', 'Finland', 'France', 'Greece', 'Hungary', 'Indonesia', 'Ireland', 'Israel', 'India', 'Iceland', 'Italy', 'Japan', 'South Korea', 'Luxembourg', 'Mexico', 'Norway', 'Poland', 'Portugal', 'Russia', 'Sweden', 'Slovenia', 'Slovakia', 'Turkey', 'United States', 'South Africa'],
-              datasets: [{
+              labels: countryList,
+               datasets: [{
                 label: "inflation (%)",
                 backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#DF0101", "#7401DF", "#00FFFF", "#B4045F", "#210B61","#2EFE64", "#FFFF00", "#9F81F7", "#646F98", "#562066", "#B47E9E", "#115A4E", "#BBF15C", "#DA8B40", "#6C322B", "#2C2372", "#A4E9E4", "#0836E0", "#F90303", "#D80D80", "#8DBA26", "#F9AE18", "#9AEA8D", "#67EDED", "#0A4296", "#FCE3A2", "#E8F090", "#335952", "#149FE5", "#600BEA", "#DF6EEE"],
-                data: [11.047, 10.629, 6.47, 6.88, 2.996, 12.812, 2.172, 15.093, 10.388, 10.112, 22.501, 7.265, 8.311, 6.2, 9.065, 21.114, 5.418, 9.16, 5.078, 6.085, 9.333, 11.837, 3.804, 5.67, 6.854, 8.407, 7.509, 18.036, 10.139, 16.698, 10.853, 9.848, 14.892, 85.515, 7.745, 7.778]
+                data : cpiList
               }]
             },
             options: {
