@@ -30,9 +30,13 @@ Pie Chart에 각 나라 별 CPI가 표시 되어 있으며 마우스를 올릴 �
 <br><br><br><br>
 
 ## <strong> 🔌 프로그램 실행 방법  </strong>
-1. npm init
-2. pip3 install beautifulsoup (없을 시)
-3. npm start
+1. pip install beautifulsoup4 (없을 시)
+2. npm start  
+
+만약 다음과 같이 뜬다면 무시하고 취소를 누른 뒤 진행해주시면 됩니다.
+
+![image](https://user-images.githubusercontent.com/78638427/206861993-7d59bf97-cca3-409e-81ca-0a386d2bd73c.png)
+
 
 
 <br><br>
